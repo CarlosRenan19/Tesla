@@ -1,0 +1,514 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    object-fit: cover;
+    object-position: center;
+}
+
+section.home-section {
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+
+header.effect {
+    background-color: transparent;
+}
+
+header.effect .links-modelos_carros a,
+header.effect .links-servicos a {
+    color: black;
+}
+
+header.effect .links-modelos_carros a::before,
+header.effect .links-servicos a::before {
+    background-color: black;
+}
+
+header.effect .logo-tesla {
+    background-image: url(./assets/IMG/tesla-logo_black.svg);
+}
+
+header.effect .menu-hamburguer span {
+    background-color: #222;
+}
+
+.logo-tesla {
+    background-image: url(./assets/IMG/tesla-logo-header.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 18px;
+}
+
+.links-modelos_carros {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.links-modelos_carros a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.links-modelos_carros a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.links-modelos_carros a:hover::before {
+    width: 100%;
+}
+
+.links-servicos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.links-servicos a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.links-servicos a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.links-servicos a:hover::before {
+    width: 100%;
+}
+
+.tesla-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.info-home {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    background-color: #22222299;
+    padding: 15px;
+    width: 600px;
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn_test-drive {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%);
+}
+
+.btn_test-drive button {
+    padding: 10px;
+    width: 300px;
+    background: 0;
+    border: 3px solid white;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.model-y {
+    background: url(./assets/IMG/model-y.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.info-model_div {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.info-model_div h2 {
+    font-size: 40px;
+    width: 100%;
+}
+
+.info-model_div a {
+    color: rgba(0, 0, 0, 0.792);
+    text-underline-position: under;
+    text-decoration: underline 1px rgba(0, 0, 0, 0.792);
+    font-size: 17px;
+}
+
+.info-model_div a:hover {
+    text-decoration: underline 2px;
+}
+
+.btn-div_model {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.btn-div_model button {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.btn-div_model button:first-of-type {
+    background-color: #444;
+    color: white;
+}
+
+.btn-div_model button:last-of-type {
+    color: #393c41;
+}
+
+.security-info {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.model-3 {
+    background-image: url(./assets/IMG/model-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+section.model-s {
+    background-image: url(./assets/IMG/model-s.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+
+
+
+section.model-x {
+    background-image: url(./assets/IMG/model-x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+
+
+
+
+section.powerwall {
+    background-image: url(./assets/IMG/solarpanels.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.info-model_div span {
+    font-size: 17px;
+}
+
+.btn-div_model-powerwall {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.btn-div_model-powerwall button {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: rgb(25, 25, 35);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.acessorios {
+    background-image: url(./assets/IMG/accessories.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.info-model_div-acessorios {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.info-model_div-acessorios h2 {
+    font-size: 40px;
+}
+
+.btn-div_model-powerwall {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+
+
+/*MOBILE-CONFIG*/
+
+
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-mobile {
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    gap: 30px;
+    padding: 30px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+}
+
+.menu-mobile.mobile-mode {
+    right: 0;
+}
+
+.links-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.links-mobile a {
+    text-decoration: none;
+    width: 100%;
+    color: #393c41;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.links-mobile a:hover {
+    background-color: #6666663c;
+}
+
+.close-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    margin-left: 13rem;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    background-color: #6666663c;
+}
+
+@media (max-width: 1400px) {
+    .links-modelos_carros {
+        display: none;
+    }
+
+    .links-servicos {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .logo-tesla {
+        width: 140px;
+    }
+}
+
+@media (max-width: 640px) {
+    .info-home {
+        width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-div_model {
+        flex-direction: column;
+        bottom: 135px;
+        gap: 15px;
+    }
+
+    .security-info {
+        bottom: 30px;
+        padding: 0 30px;
+        font-size: 16px;
+        font-weight: 450
+    }
+}
+
+@media (max-width: 350px) {
+    .info-model_div h2 {
+        font-size: 30px;
+    }
+}
